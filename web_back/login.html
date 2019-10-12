@@ -68,6 +68,7 @@
     </div>
   </body>
   <script src="./js/jquery-1.12.4.min.js"></script>
+  <script src="./tool/config.js"></script>
   <script>
   $('.input_sub').click(function(){
     var text=$('.input_txt').val()
@@ -78,7 +79,7 @@
     }else{
    $.ajax({
      type:'post',
-     url:'http://localhost:8000/admin/login',
+     url: URL_LOGIN,//从config.js页面获取的
      data:{
       user_name:text,
       password:pass
